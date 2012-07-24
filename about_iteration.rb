@@ -24,7 +24,7 @@ class AboutIteration < EdgeCase::Koan
   # -------------------------------------------------------------------
 
   def test_each_is_a_method_on_arrays
-    assert_equal __, [].methods.include?(as_name(:each))
+    assert_equal true, [].methods.include?(as_name(:each))
   end
 
   def test_iterating_with_each
@@ -33,7 +33,7 @@ class AboutIteration < EdgeCase::Koan
     array.each do |item|
       sum += item
     end
-    assert_equal __, sum
+    assert_equal 6, sum
   end
 
   def test_each_can_use_curly_brace_blocks_too
